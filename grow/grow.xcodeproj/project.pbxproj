@@ -9,16 +9,15 @@
 /* Begin PBXBuildFile section */
 		810842111D6F54F0000F7545 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 810842101D6F54F0000F7545 /* main.m */; };
 		810842141D6F54F0000F7545 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 810842131D6F54F0000F7545 /* AppDelegate.m */; };
-		810842171D6F54F0000F7545 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 810842161D6F54F0000F7545 /* ViewController.m */; };
 		8108421C1D6F54F0000F7545 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8108421B1D6F54F0000F7545 /* Assets.xcassets */; };
 		8108422A1D6F54F0000F7545 /* growTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 810842291D6F54F0000F7545 /* growTests.m */; };
 		810842351D6F54F0000F7545 /* growUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 810842341D6F54F0000F7545 /* growUITests.m */; };
 		810842441D6F56AB000F7545 /* PDTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 810842431D6F56AB000F7545 /* PDTabBar.m */; };
-		810842471D6F56E4000F7545 /* PDJinghuaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 810842461D6F56E4000F7545 /* PDJinghuaViewController.m */; };
-		8108424A1D6F56FA000F7545 /* PDZuiXinViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 810842491D6F56FA000F7545 /* PDZuiXinViewController.m */; };
-		8108424D1D6F5712000F7545 /* PDGuanZhuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8108424C1D6F5712000F7545 /* PDGuanZhuViewController.m */; };
-		810842501D6F571B000F7545 /* PDMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8108424F1D6F571B000F7545 /* PDMeViewController.m */; };
-		810842531D6F57B1000F7545 /* PDTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 810842521D6F57B1000F7545 /* PDTabBarController.m */; };
+		810842721D6F5E0B000F7545 /* PDGuanZhuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 810842691D6F5E0B000F7545 /* PDGuanZhuViewController.m */; };
+		810842731D6F5E0B000F7545 /* PDJinghuaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8108426B1D6F5E0B000F7545 /* PDJinghuaViewController.m */; };
+		810842741D6F5E0B000F7545 /* PDMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8108426D1D6F5E0B000F7545 /* PDMeViewController.m */; };
+		810842751D6F5E0B000F7545 /* PDTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8108426F1D6F5E0B000F7545 /* PDTabBarController.m */; };
+		810842761D6F5E0B000F7545 /* PDZuiXinViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 810842711D6F5E0B000F7545 /* PDZuiXinViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,8 +42,6 @@
 		810842101D6F54F0000F7545 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		810842121D6F54F0000F7545 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		810842131D6F54F0000F7545 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		810842151D6F54F0000F7545 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		810842161D6F54F0000F7545 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		8108421B1D6F54F0000F7545 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		810842201D6F54F0000F7545 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		810842251D6F54F0000F7545 /* growTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = growTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -53,18 +50,18 @@
 		810842301D6F54F0000F7545 /* growUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = growUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		810842341D6F54F0000F7545 /* growUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = growUITests.m; sourceTree = "<group>"; };
 		810842361D6F54F0000F7545 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		810842421D6F56AB000F7545 /* PDTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDTabBar.h; sourceTree = "<group>"; };
-		810842431D6F56AB000F7545 /* PDTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDTabBar.m; sourceTree = "<group>"; };
-		810842451D6F56E4000F7545 /* PDJinghuaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDJinghuaViewController.h; sourceTree = "<group>"; };
-		810842461D6F56E4000F7545 /* PDJinghuaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDJinghuaViewController.m; sourceTree = "<group>"; };
-		810842481D6F56FA000F7545 /* PDZuiXinViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDZuiXinViewController.h; sourceTree = "<group>"; };
-		810842491D6F56FA000F7545 /* PDZuiXinViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDZuiXinViewController.m; sourceTree = "<group>"; };
-		8108424B1D6F5712000F7545 /* PDGuanZhuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDGuanZhuViewController.h; sourceTree = "<group>"; };
-		8108424C1D6F5712000F7545 /* PDGuanZhuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDGuanZhuViewController.m; sourceTree = "<group>"; };
-		8108424E1D6F571B000F7545 /* PDMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDMeViewController.h; sourceTree = "<group>"; };
-		8108424F1D6F571B000F7545 /* PDMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDMeViewController.m; sourceTree = "<group>"; };
-		810842511D6F57B1000F7545 /* PDTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDTabBarController.h; sourceTree = "<group>"; };
-		810842521D6F57B1000F7545 /* PDTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDTabBarController.m; sourceTree = "<group>"; };
+		810842421D6F56AB000F7545 /* PDTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PDTabBar.h; path = ../PDTabBar.h; sourceTree = "<group>"; };
+		810842431D6F56AB000F7545 /* PDTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PDTabBar.m; path = ../PDTabBar.m; sourceTree = "<group>"; };
+		810842681D6F5E0B000F7545 /* PDGuanZhuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDGuanZhuViewController.h; sourceTree = "<group>"; };
+		810842691D6F5E0B000F7545 /* PDGuanZhuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDGuanZhuViewController.m; sourceTree = "<group>"; };
+		8108426A1D6F5E0B000F7545 /* PDJinghuaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDJinghuaViewController.h; sourceTree = "<group>"; };
+		8108426B1D6F5E0B000F7545 /* PDJinghuaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDJinghuaViewController.m; sourceTree = "<group>"; };
+		8108426C1D6F5E0B000F7545 /* PDMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDMeViewController.h; sourceTree = "<group>"; };
+		8108426D1D6F5E0B000F7545 /* PDMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDMeViewController.m; sourceTree = "<group>"; };
+		8108426E1D6F5E0B000F7545 /* PDTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDTabBarController.h; sourceTree = "<group>"; };
+		8108426F1D6F5E0B000F7545 /* PDTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDTabBarController.m; sourceTree = "<group>"; };
+		810842701D6F5E0B000F7545 /* PDZuiXinViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDZuiXinViewController.h; sourceTree = "<group>"; };
+		810842711D6F5E0B000F7545 /* PDZuiXinViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDZuiXinViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,22 +112,10 @@
 		8108420E1D6F54F0000F7545 /* grow */ = {
 			isa = PBXGroup;
 			children = (
+				810842551D6F5D9D000F7545 /* Views */,
+				810842541D6F5D65000F7545 /* ViewControllers */,
 				810842121D6F54F0000F7545 /* AppDelegate.h */,
 				810842131D6F54F0000F7545 /* AppDelegate.m */,
-				810842151D6F54F0000F7545 /* ViewController.h */,
-				810842161D6F54F0000F7545 /* ViewController.m */,
-				810842421D6F56AB000F7545 /* PDTabBar.h */,
-				810842431D6F56AB000F7545 /* PDTabBar.m */,
-				810842451D6F56E4000F7545 /* PDJinghuaViewController.h */,
-				810842461D6F56E4000F7545 /* PDJinghuaViewController.m */,
-				810842481D6F56FA000F7545 /* PDZuiXinViewController.h */,
-				810842491D6F56FA000F7545 /* PDZuiXinViewController.m */,
-				8108424B1D6F5712000F7545 /* PDGuanZhuViewController.h */,
-				8108424C1D6F5712000F7545 /* PDGuanZhuViewController.m */,
-				8108424E1D6F571B000F7545 /* PDMeViewController.h */,
-				8108424F1D6F571B000F7545 /* PDMeViewController.m */,
-				810842511D6F57B1000F7545 /* PDTabBarController.h */,
-				810842521D6F57B1000F7545 /* PDTabBarController.m */,
 				8108420F1D6F54F0000F7545 /* Supporting Files */,
 			);
 			path = grow;
@@ -162,6 +147,32 @@
 				810842361D6F54F0000F7545 /* Info.plist */,
 			);
 			path = growUITests;
+			sourceTree = "<group>";
+		};
+		810842541D6F5D65000F7545 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				810842681D6F5E0B000F7545 /* PDGuanZhuViewController.h */,
+				810842691D6F5E0B000F7545 /* PDGuanZhuViewController.m */,
+				8108426A1D6F5E0B000F7545 /* PDJinghuaViewController.h */,
+				8108426B1D6F5E0B000F7545 /* PDJinghuaViewController.m */,
+				8108426C1D6F5E0B000F7545 /* PDMeViewController.h */,
+				8108426D1D6F5E0B000F7545 /* PDMeViewController.m */,
+				8108426E1D6F5E0B000F7545 /* PDTabBarController.h */,
+				8108426F1D6F5E0B000F7545 /* PDTabBarController.m */,
+				810842701D6F5E0B000F7545 /* PDZuiXinViewController.h */,
+				810842711D6F5E0B000F7545 /* PDZuiXinViewController.m */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		810842551D6F5D9D000F7545 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				810842421D6F56AB000F7545 /* PDTabBar.h */,
+				810842431D6F56AB000F7545 /* PDTabBar.m */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -296,15 +307,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				810842531D6F57B1000F7545 /* PDTabBarController.m in Sources */,
-				810842171D6F54F0000F7545 /* ViewController.m in Sources */,
-				8108424D1D6F5712000F7545 /* PDGuanZhuViewController.m in Sources */,
-				810842471D6F56E4000F7545 /* PDJinghuaViewController.m in Sources */,
 				810842441D6F56AB000F7545 /* PDTabBar.m in Sources */,
-				810842501D6F571B000F7545 /* PDMeViewController.m in Sources */,
-				8108424A1D6F56FA000F7545 /* PDZuiXinViewController.m in Sources */,
+				810842731D6F5E0B000F7545 /* PDJinghuaViewController.m in Sources */,
+				810842721D6F5E0B000F7545 /* PDGuanZhuViewController.m in Sources */,
 				810842141D6F54F0000F7545 /* AppDelegate.m in Sources */,
+				810842741D6F5E0B000F7545 /* PDMeViewController.m in Sources */,
+				810842761D6F5E0B000F7545 /* PDZuiXinViewController.m in Sources */,
 				810842111D6F54F0000F7545 /* main.m in Sources */,
+				810842751D6F5E0B000F7545 /* PDTabBarController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
