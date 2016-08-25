@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "ViewController.h"
+#import "PDTabBarController.h"
 
 @interface AppDelegate ()
 
@@ -19,9 +19,10 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     self.window = [[UIWindow alloc]initWithFrame:[[UIScreen mainScreen] bounds]];
-    UIViewController *vc = [[ViewController alloc]init];
-    vc.view.backgroundColor = [UIColor orangeColor];
-    self.window.rootViewController = vc;
+    PDTabBarController *tabController = [[PDTabBarController alloc]init];
+//    UIViewController *vc = [[ViewController alloc]init];
+//    vc.view.backgroundColor = [UIColor orangeColor];
+    self.window.rootViewController = tabController;
     [self.window makeKeyAndVisible];
     
     return YES;

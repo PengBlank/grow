@@ -13,6 +13,12 @@
 		8108421C1D6F54F0000F7545 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8108421B1D6F54F0000F7545 /* Assets.xcassets */; };
 		8108422A1D6F54F0000F7545 /* growTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 810842291D6F54F0000F7545 /* growTests.m */; };
 		810842351D6F54F0000F7545 /* growUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 810842341D6F54F0000F7545 /* growUITests.m */; };
+		810842441D6F56AB000F7545 /* PDTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 810842431D6F56AB000F7545 /* PDTabBar.m */; };
+		810842471D6F56E4000F7545 /* PDJinghuaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 810842461D6F56E4000F7545 /* PDJinghuaViewController.m */; };
+		8108424A1D6F56FA000F7545 /* PDZuiXinViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 810842491D6F56FA000F7545 /* PDZuiXinViewController.m */; };
+		8108424D1D6F5712000F7545 /* PDGuanZhuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8108424C1D6F5712000F7545 /* PDGuanZhuViewController.m */; };
+		810842501D6F571B000F7545 /* PDMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8108424F1D6F571B000F7545 /* PDMeViewController.m */; };
+		810842531D6F57B1000F7545 /* PDTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 810842521D6F57B1000F7545 /* PDTabBarController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +53,18 @@
 		810842301D6F54F0000F7545 /* growUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = growUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		810842341D6F54F0000F7545 /* growUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = growUITests.m; sourceTree = "<group>"; };
 		810842361D6F54F0000F7545 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		810842421D6F56AB000F7545 /* PDTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDTabBar.h; sourceTree = "<group>"; };
+		810842431D6F56AB000F7545 /* PDTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDTabBar.m; sourceTree = "<group>"; };
+		810842451D6F56E4000F7545 /* PDJinghuaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDJinghuaViewController.h; sourceTree = "<group>"; };
+		810842461D6F56E4000F7545 /* PDJinghuaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDJinghuaViewController.m; sourceTree = "<group>"; };
+		810842481D6F56FA000F7545 /* PDZuiXinViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDZuiXinViewController.h; sourceTree = "<group>"; };
+		810842491D6F56FA000F7545 /* PDZuiXinViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDZuiXinViewController.m; sourceTree = "<group>"; };
+		8108424B1D6F5712000F7545 /* PDGuanZhuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDGuanZhuViewController.h; sourceTree = "<group>"; };
+		8108424C1D6F5712000F7545 /* PDGuanZhuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDGuanZhuViewController.m; sourceTree = "<group>"; };
+		8108424E1D6F571B000F7545 /* PDMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDMeViewController.h; sourceTree = "<group>"; };
+		8108424F1D6F571B000F7545 /* PDMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDMeViewController.m; sourceTree = "<group>"; };
+		810842511D6F57B1000F7545 /* PDTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDTabBarController.h; sourceTree = "<group>"; };
+		810842521D6F57B1000F7545 /* PDTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDTabBarController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +119,18 @@
 				810842131D6F54F0000F7545 /* AppDelegate.m */,
 				810842151D6F54F0000F7545 /* ViewController.h */,
 				810842161D6F54F0000F7545 /* ViewController.m */,
+				810842421D6F56AB000F7545 /* PDTabBar.h */,
+				810842431D6F56AB000F7545 /* PDTabBar.m */,
+				810842451D6F56E4000F7545 /* PDJinghuaViewController.h */,
+				810842461D6F56E4000F7545 /* PDJinghuaViewController.m */,
+				810842481D6F56FA000F7545 /* PDZuiXinViewController.h */,
+				810842491D6F56FA000F7545 /* PDZuiXinViewController.m */,
+				8108424B1D6F5712000F7545 /* PDGuanZhuViewController.h */,
+				8108424C1D6F5712000F7545 /* PDGuanZhuViewController.m */,
+				8108424E1D6F571B000F7545 /* PDMeViewController.h */,
+				8108424F1D6F571B000F7545 /* PDMeViewController.m */,
+				810842511D6F57B1000F7545 /* PDTabBarController.h */,
+				810842521D6F57B1000F7545 /* PDTabBarController.m */,
 				8108420F1D6F54F0000F7545 /* Supporting Files */,
 			);
 			path = grow;
@@ -196,6 +226,7 @@
 		810842041D6F54F0000F7545 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = PD;
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = snow;
 				TargetAttributes = {
@@ -265,7 +296,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				810842531D6F57B1000F7545 /* PDTabBarController.m in Sources */,
 				810842171D6F54F0000F7545 /* ViewController.m in Sources */,
+				8108424D1D6F5712000F7545 /* PDGuanZhuViewController.m in Sources */,
+				810842471D6F56E4000F7545 /* PDJinghuaViewController.m in Sources */,
+				810842441D6F56AB000F7545 /* PDTabBar.m in Sources */,
+				810842501D6F571B000F7545 /* PDMeViewController.m in Sources */,
+				8108424A1D6F56FA000F7545 /* PDZuiXinViewController.m in Sources */,
 				810842141D6F54F0000F7545 /* AppDelegate.m in Sources */,
 				810842111D6F54F0000F7545 /* main.m in Sources */,
 			);
