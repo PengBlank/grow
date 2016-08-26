@@ -13,11 +13,11 @@
 		8108422A1D6F54F0000F7545 /* growTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 810842291D6F54F0000F7545 /* growTests.m */; };
 		810842351D6F54F0000F7545 /* growUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 810842341D6F54F0000F7545 /* growUITests.m */; };
 		810842441D6F56AB000F7545 /* PDTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 810842431D6F56AB000F7545 /* PDTabBar.m */; };
-		810842721D6F5E0B000F7545 /* PDGuanZhuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 810842691D6F5E0B000F7545 /* PDGuanZhuViewController.m */; };
-		810842731D6F5E0B000F7545 /* PDJinghuaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8108426B1D6F5E0B000F7545 /* PDJinghuaViewController.m */; };
+		810842721D6F5E0B000F7545 /* PDFriendTrendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 810842691D6F5E0B000F7545 /* PDFriendTrendsViewController.m */; };
+		810842731D6F5E0B000F7545 /* PDEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8108426B1D6F5E0B000F7545 /* PDEssenceViewController.m */; };
 		810842741D6F5E0B000F7545 /* PDMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8108426D1D6F5E0B000F7545 /* PDMeViewController.m */; };
 		810842751D6F5E0B000F7545 /* PDTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8108426F1D6F5E0B000F7545 /* PDTabBarController.m */; };
-		810842761D6F5E0B000F7545 /* PDZuiXinViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 810842711D6F5E0B000F7545 /* PDZuiXinViewController.m */; };
+		810842761D6F5E0B000F7545 /* PDNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 810842711D6F5E0B000F7545 /* PDNewViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,16 +52,16 @@
 		810842361D6F54F0000F7545 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		810842421D6F56AB000F7545 /* PDTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PDTabBar.h; path = ../PDTabBar.h; sourceTree = "<group>"; };
 		810842431D6F56AB000F7545 /* PDTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PDTabBar.m; path = ../PDTabBar.m; sourceTree = "<group>"; };
-		810842681D6F5E0B000F7545 /* PDGuanZhuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDGuanZhuViewController.h; sourceTree = "<group>"; };
-		810842691D6F5E0B000F7545 /* PDGuanZhuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDGuanZhuViewController.m; sourceTree = "<group>"; };
-		8108426A1D6F5E0B000F7545 /* PDJinghuaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDJinghuaViewController.h; sourceTree = "<group>"; };
-		8108426B1D6F5E0B000F7545 /* PDJinghuaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDJinghuaViewController.m; sourceTree = "<group>"; };
+		810842681D6F5E0B000F7545 /* PDFriendTrendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDFriendTrendsViewController.h; sourceTree = "<group>"; };
+		810842691D6F5E0B000F7545 /* PDFriendTrendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFriendTrendsViewController.m; sourceTree = "<group>"; };
+		8108426A1D6F5E0B000F7545 /* PDEssenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDEssenceViewController.h; sourceTree = "<group>"; };
+		8108426B1D6F5E0B000F7545 /* PDEssenceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDEssenceViewController.m; sourceTree = "<group>"; };
 		8108426C1D6F5E0B000F7545 /* PDMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDMeViewController.h; sourceTree = "<group>"; };
 		8108426D1D6F5E0B000F7545 /* PDMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDMeViewController.m; sourceTree = "<group>"; };
 		8108426E1D6F5E0B000F7545 /* PDTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDTabBarController.h; sourceTree = "<group>"; };
 		8108426F1D6F5E0B000F7545 /* PDTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDTabBarController.m; sourceTree = "<group>"; };
-		810842701D6F5E0B000F7545 /* PDZuiXinViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDZuiXinViewController.h; sourceTree = "<group>"; };
-		810842711D6F5E0B000F7545 /* PDZuiXinViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDZuiXinViewController.m; sourceTree = "<group>"; };
+		810842701D6F5E0B000F7545 /* PDNewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDNewViewController.h; sourceTree = "<group>"; };
+		810842711D6F5E0B000F7545 /* PDNewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDNewViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,16 +152,16 @@
 		810842541D6F5D65000F7545 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				810842681D6F5E0B000F7545 /* PDGuanZhuViewController.h */,
-				810842691D6F5E0B000F7545 /* PDGuanZhuViewController.m */,
-				8108426A1D6F5E0B000F7545 /* PDJinghuaViewController.h */,
-				8108426B1D6F5E0B000F7545 /* PDJinghuaViewController.m */,
+				810842681D6F5E0B000F7545 /* PDFriendTrendsViewController.h */,
+				810842691D6F5E0B000F7545 /* PDFriendTrendsViewController.m */,
+				8108426A1D6F5E0B000F7545 /* PDEssenceViewController.h */,
+				8108426B1D6F5E0B000F7545 /* PDEssenceViewController.m */,
 				8108426C1D6F5E0B000F7545 /* PDMeViewController.h */,
 				8108426D1D6F5E0B000F7545 /* PDMeViewController.m */,
 				8108426E1D6F5E0B000F7545 /* PDTabBarController.h */,
 				8108426F1D6F5E0B000F7545 /* PDTabBarController.m */,
-				810842701D6F5E0B000F7545 /* PDZuiXinViewController.h */,
-				810842711D6F5E0B000F7545 /* PDZuiXinViewController.m */,
+				810842701D6F5E0B000F7545 /* PDNewViewController.h */,
+				810842711D6F5E0B000F7545 /* PDNewViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -308,11 +308,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				810842441D6F56AB000F7545 /* PDTabBar.m in Sources */,
-				810842731D6F5E0B000F7545 /* PDJinghuaViewController.m in Sources */,
-				810842721D6F5E0B000F7545 /* PDGuanZhuViewController.m in Sources */,
+				810842731D6F5E0B000F7545 /* PDEssenceViewController.m in Sources */,
+				810842721D6F5E0B000F7545 /* PDFriendTrendsViewController.m in Sources */,
 				810842141D6F54F0000F7545 /* AppDelegate.m in Sources */,
 				810842741D6F5E0B000F7545 /* PDMeViewController.m in Sources */,
-				810842761D6F5E0B000F7545 /* PDZuiXinViewController.m in Sources */,
+				810842761D6F5E0B000F7545 /* PDNewViewController.m in Sources */,
 				810842111D6F54F0000F7545 /* main.m in Sources */,
 				810842751D6F5E0B000F7545 /* PDTabBarController.m in Sources */,
 			);
@@ -523,6 +523,7 @@
 				8108423B1D6F54F0000F7545 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8108423C1D6F54F0000F7545 /* Build configuration list for PBXNativeTarget "growTests" */ = {
 			isa = XCConfigurationList;
@@ -531,6 +532,7 @@
 				8108423E1D6F54F0000F7545 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8108423F1D6F54F0000F7545 /* Build configuration list for PBXNativeTarget "growUITests" */ = {
 			isa = XCConfigurationList;
@@ -539,6 +541,7 @@
 				810842411D6F54F0000F7545 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PDJinghuaViewController : UIViewController
+@interface PDEssenceViewController : UIViewController
 
 @end

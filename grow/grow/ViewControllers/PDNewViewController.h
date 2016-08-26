@@ -1,5 +1,5 @@
 //
-//  PDGuanZhuViewController.h
+//  PDZuiXinViewController.h
 //  grow
 //
 //  Created by Luca  on 16/8/26.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PDGuanZhuViewController : UIViewController
+@interface PDNewViewController : UIViewController
 
 @end

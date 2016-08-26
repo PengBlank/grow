@@ -6,13 +6,13 @@
 //  Copyright © 2016年 snow. All rights reserved.
 //
 
-#import "PDZuiXinViewController.h"
+#import "PDNewViewController.h"
 
-@interface PDZuiXinViewController ()
+@interface PDNewViewController ()
 
 @end
 
-@implementation PDZuiXinViewController
+@implementation PDNewViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

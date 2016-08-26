@@ -20,8 +20,6 @@
     
     self.window = [[UIWindow alloc]initWithFrame:[[UIScreen mainScreen] bounds]];
     PDTabBarController *tabController = [[PDTabBarController alloc]init];
-//    UIViewController *vc = [[ViewController alloc]init];
-//    vc.view.backgroundColor = [UIColor orangeColor];
     self.window.rootViewController = tabController;
     [self.window makeKeyAndVisible];
     

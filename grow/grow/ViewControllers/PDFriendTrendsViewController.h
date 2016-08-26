@@ -1,5 +1,5 @@
 //
-//  PDZuiXinViewController.h
+//  PDGuanZhuViewController.h
 //  grow
 //
 //  Created by Luca  on 16/8/26.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PDZuiXinViewController : UIViewController
+@interface PDFriendTrendsViewController : UIViewController
 
 @end

@@ -6,13 +6,13 @@
 //  Copyright © 2016年 snow. All rights reserved.
 //
 
-#import "PDJinghuaViewController.h"
+#import "PDEssenceViewController.h"
 
-@interface PDJinghuaViewController ()
+@interface PDEssenceViewController ()
 
 @end
 
-@implementation PDJinghuaViewController
+@implementation PDEssenceViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
