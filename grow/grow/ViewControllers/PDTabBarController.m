@@ -24,22 +24,18 @@
         PDEssenceViewController *jingHuaVC = [[PDEssenceViewController alloc]init];
         [self setupViewController:jingHuaVC title:@"精华" image:@"tabBar_essence_icon" selectedImage:@"tabBar_essence_click_icon"];
         jingHuaVC.view.backgroundColor = [UIColor orangeColor];
-        [self addChildViewController:jingHuaVC];
         
         PDNewViewController *zuiXinVC = [[PDNewViewController alloc]init];
         zuiXinVC.view.backgroundColor = [UIColor blueColor];
         [self setupViewController:zuiXinVC title:@"最新" image:@"tabBar_new_icon" selectedImage:@"tabBar_new_click_icon"];
-        [self addChildViewController:zuiXinVC];
         
         PDFriendTrendsViewController *guanZhuVC = [[PDFriendTrendsViewController alloc]init];
         guanZhuVC.view.backgroundColor = [UIColor redColor];
         [self setupViewController:guanZhuVC title:@"关注" image:@"tabBar_friendTrends_icon" selectedImage:@"tabBar_friendTrends_click_icon"];
-        [self addChildViewController:guanZhuVC];
         
         PDMeViewController *meVC = [[PDMeViewController alloc]init];
         meVC.view.backgroundColor = [UIColor greenColor];
         [self setupViewController:meVC title:@"我" image:@"tabBar_me_icon" selectedImage:@"tabBar_me_click_icon"];
-        [self addChildViewController:meVC];
         //自定义tabbar
         [self setValue:[[PDTabBar alloc]init] forKeyPath:@"tabBar"];
   
@@ -79,6 +75,8 @@
     selectImage = [selectImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     viewController.tabBarItem.selectedImage = selectImage;
     
+    UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:viewController];
+    [self addChildViewController:nav];
 }
 
 @end
