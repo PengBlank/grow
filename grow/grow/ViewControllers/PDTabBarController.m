@@ -11,7 +11,7 @@
 #import "PDNewViewController.h"
 #import "PDFriendTrendsViewController.h"
 #import "PDMeViewController.h"
-
+#import "PDTabBar.h"
 @interface PDTabBarController ()
 
 @end
@@ -40,15 +40,16 @@
         meVC.view.backgroundColor = [UIColor greenColor];
         [self setupViewController:meVC title:@"我" image:@"tabBar_me_icon" selectedImage:@"tabBar_me_click_icon"];
         [self addChildViewController:meVC];
-        
-        self.selectedViewController = meVC;
-    
+        //自定义tabbar
+        [self setValue:[[PDTabBar alloc]init] forKeyPath:@"tabBar"];
+  
     }
     return self;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     //设置tabBarItem的属性值(通过appearance全局设置一次)
     NSMutableDictionary *attrs = [NSMutableDictionary dictionary];
     attrs[NSFontAttributeName] = [UIFont systemFontOfSize:12];
