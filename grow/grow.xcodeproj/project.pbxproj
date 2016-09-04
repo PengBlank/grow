@@ -7,18 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		810842111D6F54F0000F7545 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 810842101D6F54F0000F7545 /* main.m */; };
-		810842141D6F54F0000F7545 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 810842131D6F54F0000F7545 /* AppDelegate.m */; };
-		8108421C1D6F54F0000F7545 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8108421B1D6F54F0000F7545 /* Assets.xcassets */; };
 		8108422A1D6F54F0000F7545 /* growTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 810842291D6F54F0000F7545 /* growTests.m */; };
 		810842351D6F54F0000F7545 /* growUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 810842341D6F54F0000F7545 /* growUITests.m */; };
-		810842441D6F56AB000F7545 /* PDTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 810842431D6F56AB000F7545 /* PDTabBar.m */; };
-		810842721D6F5E0B000F7545 /* PDFriendTrendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 810842691D6F5E0B000F7545 /* PDFriendTrendsViewController.m */; };
-		810842731D6F5E0B000F7545 /* PDEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8108426B1D6F5E0B000F7545 /* PDEssenceViewController.m */; };
-		810842741D6F5E0B000F7545 /* PDMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8108426D1D6F5E0B000F7545 /* PDMeViewController.m */; };
-		810842751D6F5E0B000F7545 /* PDTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8108426F1D6F5E0B000F7545 /* PDTabBarController.m */; };
-		810842761D6F5E0B000F7545 /* PDNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 810842711D6F5E0B000F7545 /* PDNewViewController.m */; };
-		81212E801D7956130020B578 /* UIBarButtonItem+PDExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 81212E7F1D7956130020B578 /* UIBarButtonItem+PDExtension.m */; };
+		815BC9CF1D7C7472006C4959 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 815BC9B81D7C7472006C4959 /* AppDelegate.m */; };
+		815BC9D01D7C7472006C4959 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 815BC9B91D7C7472006C4959 /* Assets.xcassets */; };
+		815BC9D11D7C7472006C4959 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 815BC9BA1D7C7472006C4959 /* Info.plist */; };
+		815BC9D21D7C7472006C4959 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 815BC9BB1D7C7472006C4959 /* main.m */; };
+		815BC9D31D7C7472006C4959 /* PDTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 815BC9BE1D7C7472006C4959 /* PDTabBarController.m */; };
+		815BC9D41D7C7472006C4959 /* PDEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 815BC9C21D7C7472006C4959 /* PDEssenceViewController.m */; };
+		815BC9D51D7C7472006C4959 /* PDFriendTrendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 815BC9C51D7C7472006C4959 /* PDFriendTrendsViewController.m */; };
+		815BC9D71D7C7472006C4959 /* PDNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 815BC9CB1D7C7472006C4959 /* PDNewViewController.m */; };
+		815BC9D81D7C7472006C4959 /* PDTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 815BC9CE1D7C7472006C4959 /* PDTabBar.m */; };
+		815BC9DC1D7C749B006C4959 /* PDMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 815BC9DB1D7C749B006C4959 /* PDMeViewController.m */; };
+		815BC9DF1D7C7523006C4959 /* UIBarButtonItem+PDExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 815BC9DE1D7C7523006C4959 /* UIBarButtonItem+PDExtension.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,31 +41,31 @@
 
 /* Begin PBXFileReference section */
 		8108420C1D6F54F0000F7545 /* grow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = grow.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		810842101D6F54F0000F7545 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		810842121D6F54F0000F7545 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		810842131D6F54F0000F7545 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		8108421B1D6F54F0000F7545 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		810842201D6F54F0000F7545 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		810842251D6F54F0000F7545 /* growTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = growTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		810842291D6F54F0000F7545 /* growTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = growTests.m; sourceTree = "<group>"; };
 		8108422B1D6F54F0000F7545 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		810842301D6F54F0000F7545 /* growUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = growUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		810842341D6F54F0000F7545 /* growUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = growUITests.m; sourceTree = "<group>"; };
 		810842361D6F54F0000F7545 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		810842421D6F56AB000F7545 /* PDTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PDTabBar.h; path = ../PDTabBar.h; sourceTree = "<group>"; };
-		810842431D6F56AB000F7545 /* PDTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PDTabBar.m; path = ../PDTabBar.m; sourceTree = "<group>"; };
-		810842681D6F5E0B000F7545 /* PDFriendTrendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDFriendTrendsViewController.h; sourceTree = "<group>"; };
-		810842691D6F5E0B000F7545 /* PDFriendTrendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFriendTrendsViewController.m; sourceTree = "<group>"; };
-		8108426A1D6F5E0B000F7545 /* PDEssenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDEssenceViewController.h; sourceTree = "<group>"; };
-		8108426B1D6F5E0B000F7545 /* PDEssenceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDEssenceViewController.m; sourceTree = "<group>"; };
-		8108426C1D6F5E0B000F7545 /* PDMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDMeViewController.h; sourceTree = "<group>"; };
-		8108426D1D6F5E0B000F7545 /* PDMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDMeViewController.m; sourceTree = "<group>"; };
-		8108426E1D6F5E0B000F7545 /* PDTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDTabBarController.h; sourceTree = "<group>"; };
-		8108426F1D6F5E0B000F7545 /* PDTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDTabBarController.m; sourceTree = "<group>"; };
-		810842701D6F5E0B000F7545 /* PDNewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDNewViewController.h; sourceTree = "<group>"; };
-		810842711D6F5E0B000F7545 /* PDNewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDNewViewController.m; sourceTree = "<group>"; };
-		81212E7E1D7956130020B578 /* UIBarButtonItem+PDExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+PDExtension.h"; sourceTree = "<group>"; };
-		81212E7F1D7956130020B578 /* UIBarButtonItem+PDExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+PDExtension.m"; sourceTree = "<group>"; };
+		815BC9B71D7C7472006C4959 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		815BC9B81D7C7472006C4959 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		815BC9B91D7C7472006C4959 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		815BC9BA1D7C7472006C4959 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		815BC9BB1D7C7472006C4959 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		815BC9BD1D7C7472006C4959 /* PDTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDTabBarController.h; sourceTree = "<group>"; };
+		815BC9BE1D7C7472006C4959 /* PDTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDTabBarController.m; sourceTree = "<group>"; };
+		815BC9C11D7C7472006C4959 /* PDEssenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDEssenceViewController.h; sourceTree = "<group>"; };
+		815BC9C21D7C7472006C4959 /* PDEssenceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDEssenceViewController.m; sourceTree = "<group>"; };
+		815BC9C41D7C7472006C4959 /* PDFriendTrendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDFriendTrendsViewController.h; sourceTree = "<group>"; };
+		815BC9C51D7C7472006C4959 /* PDFriendTrendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFriendTrendsViewController.m; sourceTree = "<group>"; };
+		815BC9CA1D7C7472006C4959 /* PDNewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDNewViewController.h; sourceTree = "<group>"; };
+		815BC9CB1D7C7472006C4959 /* PDNewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDNewViewController.m; sourceTree = "<group>"; };
+		815BC9CD1D7C7472006C4959 /* PDTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDTabBar.h; sourceTree = "<group>"; };
+		815BC9CE1D7C7472006C4959 /* PDTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDTabBar.m; sourceTree = "<group>"; };
+		815BC9DA1D7C749B006C4959 /* PDMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDMeViewController.h; sourceTree = "<group>"; };
+		815BC9DB1D7C749B006C4959 /* PDMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDMeViewController.m; sourceTree = "<group>"; };
+		815BC9DD1D7C7523006C4959 /* UIBarButtonItem+PDExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+PDExtension.h"; sourceTree = "<group>"; };
+		815BC9DE1D7C7523006C4959 /* UIBarButtonItem+PDExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+PDExtension.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +96,7 @@
 		810842031D6F54F0000F7545 = {
 			isa = PBXGroup;
 			children = (
-				8108420E1D6F54F0000F7545 /* grow */,
+				815BC9B41D7C7472006C4959 /* grow */,
 				810842281D6F54F0000F7545 /* growTests */,
 				810842331D6F54F0000F7545 /* growUITests */,
 				8108420D1D6F54F0000F7545 /* Products */,
@@ -110,29 +111,6 @@
 				810842301D6F54F0000F7545 /* growUITests.xctest */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		8108420E1D6F54F0000F7545 /* grow */ = {
-			isa = PBXGroup;
-			children = (
-				810842551D6F5D9D000F7545 /* Views */,
-				810842541D6F5D65000F7545 /* ViewControllers */,
-				810842121D6F54F0000F7545 /* AppDelegate.h */,
-				810842131D6F54F0000F7545 /* AppDelegate.m */,
-				8148DD111D788898009902E4 /* Extensions */,
-				8108420F1D6F54F0000F7545 /* Supporting Files */,
-			);
-			path = grow;
-			sourceTree = "<group>";
-		};
-		8108420F1D6F54F0000F7545 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				8108421B1D6F54F0000F7545 /* Assets.xcassets */,
-				810842201D6F54F0000F7545 /* Info.plist */,
-				810842101D6F54F0000F7545 /* main.m */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		810842281D6F54F0000F7545 /* growTests */ = {
@@ -153,39 +131,102 @@
 			path = growUITests;
 			sourceTree = "<group>";
 		};
-		810842541D6F5D65000F7545 /* ViewControllers */ = {
+		815BC9B41D7C7472006C4959 /* grow */ = {
 			isa = PBXGroup;
 			children = (
-				810842681D6F5E0B000F7545 /* PDFriendTrendsViewController.h */,
-				810842691D6F5E0B000F7545 /* PDFriendTrendsViewController.m */,
-				8108426A1D6F5E0B000F7545 /* PDEssenceViewController.h */,
-				8108426B1D6F5E0B000F7545 /* PDEssenceViewController.m */,
-				8108426C1D6F5E0B000F7545 /* PDMeViewController.h */,
-				8108426D1D6F5E0B000F7545 /* PDMeViewController.m */,
-				8108426E1D6F5E0B000F7545 /* PDTabBarController.h */,
-				8108426F1D6F5E0B000F7545 /* PDTabBarController.m */,
-				810842701D6F5E0B000F7545 /* PDNewViewController.h */,
-				810842711D6F5E0B000F7545 /* PDNewViewController.m */,
+				815BC9BF1D7C7472006C4959 /* ViewControllers */,
+				815BC9CC1D7C7472006C4959 /* Views */,
+				815BC9B51D7C7472006C4959 /* Category */,
+				815BC9B61D7C7472006C4959 /* Others */,
+			);
+			path = grow;
+			sourceTree = "<group>";
+		};
+		815BC9B51D7C7472006C4959 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				815BC9DD1D7C7523006C4959 /* UIBarButtonItem+PDExtension.h */,
+				815BC9DE1D7C7523006C4959 /* UIBarButtonItem+PDExtension.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		815BC9B61D7C7472006C4959 /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				815BC9BC1D7C7472006C4959 /* ViewControllers */,
+				815BC9B71D7C7472006C4959 /* AppDelegate.h */,
+				815BC9B81D7C7472006C4959 /* AppDelegate.m */,
+				815BC9B91D7C7472006C4959 /* Assets.xcassets */,
+				815BC9BA1D7C7472006C4959 /* Info.plist */,
+				815BC9BB1D7C7472006C4959 /* main.m */,
+			);
+			path = Others;
+			sourceTree = "<group>";
+		};
+		815BC9BC1D7C7472006C4959 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				815BC9BD1D7C7472006C4959 /* PDTabBarController.h */,
+				815BC9BE1D7C7472006C4959 /* PDTabBarController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
-		810842551D6F5D9D000F7545 /* Views */ = {
+		815BC9BF1D7C7472006C4959 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				810842421D6F56AB000F7545 /* PDTabBar.h */,
-				810842431D6F56AB000F7545 /* PDTabBar.m */,
+				815BC9C01D7C7472006C4959 /* Essence-精华 */,
+				815BC9C31D7C7472006C4959 /* FriendTrends - 关注 */,
+				815BC9C91D7C7472006C4959 /* New - 新帖 */,
+				815BC9D91D7C749B006C4959 /* Me - 我的 */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		815BC9C01D7C7472006C4959 /* Essence-精华 */ = {
+			isa = PBXGroup;
+			children = (
+				815BC9C11D7C7472006C4959 /* PDEssenceViewController.h */,
+				815BC9C21D7C7472006C4959 /* PDEssenceViewController.m */,
+			);
+			path = "Essence-精华";
+			sourceTree = "<group>";
+		};
+		815BC9C31D7C7472006C4959 /* FriendTrends - 关注 */ = {
+			isa = PBXGroup;
+			children = (
+				815BC9C41D7C7472006C4959 /* PDFriendTrendsViewController.h */,
+				815BC9C51D7C7472006C4959 /* PDFriendTrendsViewController.m */,
+			);
+			path = "FriendTrends - 关注";
+			sourceTree = "<group>";
+		};
+		815BC9C91D7C7472006C4959 /* New - 新帖 */ = {
+			isa = PBXGroup;
+			children = (
+				815BC9CA1D7C7472006C4959 /* PDNewViewController.h */,
+				815BC9CB1D7C7472006C4959 /* PDNewViewController.m */,
+			);
+			path = "New - 新帖";
+			sourceTree = "<group>";
+		};
+		815BC9CC1D7C7472006C4959 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				815BC9CD1D7C7472006C4959 /* PDTabBar.h */,
+				815BC9CE1D7C7472006C4959 /* PDTabBar.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
 		};
-		8148DD111D788898009902E4 /* Extensions */ = {
+		815BC9D91D7C749B006C4959 /* Me - 我的 */ = {
 			isa = PBXGroup;
 			children = (
-				81212E7E1D7956130020B578 /* UIBarButtonItem+PDExtension.h */,
-				81212E7F1D7956130020B578 /* UIBarButtonItem+PDExtension.m */,
+				815BC9DA1D7C749B006C4959 /* PDMeViewController.h */,
+				815BC9DB1D7C749B006C4959 /* PDMeViewController.m */,
 			);
-			path = Extensions;
+			path = "Me - 我的";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -295,7 +336,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8108421C1D6F54F0000F7545 /* Assets.xcassets in Resources */,
+				815BC9D11D7C7472006C4959 /* Info.plist in Resources */,
+				815BC9D01D7C7472006C4959 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,15 +362,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				810842441D6F56AB000F7545 /* PDTabBar.m in Sources */,
-				810842731D6F5E0B000F7545 /* PDEssenceViewController.m in Sources */,
-				81212E801D7956130020B578 /* UIBarButtonItem+PDExtension.m in Sources */,
-				810842721D6F5E0B000F7545 /* PDFriendTrendsViewController.m in Sources */,
-				810842141D6F54F0000F7545 /* AppDelegate.m in Sources */,
-				810842741D6F5E0B000F7545 /* PDMeViewController.m in Sources */,
-				810842761D6F5E0B000F7545 /* PDNewViewController.m in Sources */,
-				810842111D6F54F0000F7545 /* main.m in Sources */,
-				810842751D6F5E0B000F7545 /* PDTabBarController.m in Sources */,
+				815BC9D31D7C7472006C4959 /* PDTabBarController.m in Sources */,
+				815BC9D71D7C7472006C4959 /* PDNewViewController.m in Sources */,
+				815BC9DF1D7C7523006C4959 /* UIBarButtonItem+PDExtension.m in Sources */,
+				815BC9D51D7C7472006C4959 /* PDFriendTrendsViewController.m in Sources */,
+				815BC9D41D7C7472006C4959 /* PDEssenceViewController.m in Sources */,
+				815BC9DC1D7C749B006C4959 /* PDMeViewController.m in Sources */,
+				815BC9D21D7C7472006C4959 /* main.m in Sources */,
+				815BC9D81D7C7472006C4959 /* PDTabBar.m in Sources */,
+				815BC9CF1D7C7472006C4959 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -453,7 +495,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				INFOPLIST_FILE = grow/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/grow/Others/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = PD.grow;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -465,7 +507,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				INFOPLIST_FILE = grow/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/grow/Others/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = PD.grow;
 				PRODUCT_NAME = "$(TARGET_NAME)";
