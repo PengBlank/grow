@@ -7,7 +7,8 @@
 //
 
 #import "PDFriendTrendsViewController.h"
-
+#import "UIBarButtonItem+PDExtension.h"
+//关注
 @interface PDFriendTrendsViewController ()
 
 @end
@@ -16,10 +17,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
+    
+    self.navigationItem.title = @"关注";
+    
+    self.navigationItem.leftBarButtonItem = [UIBarButtonItem buttonWithImage:@"friendsRecommentIcon" highlightImage:@"friendsRecommentIcon-click"];
+    
 }
 @end

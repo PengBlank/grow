@@ -18,6 +18,7 @@
 		810842741D6F5E0B000F7545 /* PDMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8108426D1D6F5E0B000F7545 /* PDMeViewController.m */; };
 		810842751D6F5E0B000F7545 /* PDTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8108426F1D6F5E0B000F7545 /* PDTabBarController.m */; };
 		810842761D6F5E0B000F7545 /* PDNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 810842711D6F5E0B000F7545 /* PDNewViewController.m */; };
+		81212E801D7956130020B578 /* UIBarButtonItem+PDExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 81212E7F1D7956130020B578 /* UIBarButtonItem+PDExtension.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,8 @@
 		8108426F1D6F5E0B000F7545 /* PDTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDTabBarController.m; sourceTree = "<group>"; };
 		810842701D6F5E0B000F7545 /* PDNewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDNewViewController.h; sourceTree = "<group>"; };
 		810842711D6F5E0B000F7545 /* PDNewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDNewViewController.m; sourceTree = "<group>"; };
+		81212E7E1D7956130020B578 /* UIBarButtonItem+PDExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+PDExtension.h"; sourceTree = "<group>"; };
+		81212E7F1D7956130020B578 /* UIBarButtonItem+PDExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+PDExtension.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +119,7 @@
 				810842541D6F5D65000F7545 /* ViewControllers */,
 				810842121D6F54F0000F7545 /* AppDelegate.h */,
 				810842131D6F54F0000F7545 /* AppDelegate.m */,
+				8148DD111D788898009902E4 /* Extensions */,
 				8108420F1D6F54F0000F7545 /* Supporting Files */,
 			);
 			path = grow;
@@ -173,6 +177,15 @@
 				810842431D6F56AB000F7545 /* PDTabBar.m */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		8148DD111D788898009902E4 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				81212E7E1D7956130020B578 /* UIBarButtonItem+PDExtension.h */,
+				81212E7F1D7956130020B578 /* UIBarButtonItem+PDExtension.m */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -309,6 +322,7 @@
 			files = (
 				810842441D6F56AB000F7545 /* PDTabBar.m in Sources */,
 				810842731D6F5E0B000F7545 /* PDEssenceViewController.m in Sources */,
+				81212E801D7956130020B578 /* UIBarButtonItem+PDExtension.m in Sources */,
 				810842721D6F5E0B000F7545 /* PDFriendTrendsViewController.m in Sources */,
 				810842141D6F54F0000F7545 /* AppDelegate.m in Sources */,
 				810842741D6F5E0B000F7545 /* PDMeViewController.m in Sources */,

@@ -11,11 +11,17 @@
 @interface PDNewViewController ()
 
 @end
-
+// 最新
 @implementation PDNewViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    UIView *titleView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"MainTitle"]];
+    
+//    self.navigationItem.leftBarButtonItem = [UIBarButtonItem buttonWithImage:@"MainTagSubIcon" highlightImage:@"MainTagSubIconClick"];
+    
+    self.navigationItem.titleView = titleView;
 }
 
 @end

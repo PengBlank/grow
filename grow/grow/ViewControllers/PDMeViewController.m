@@ -7,20 +7,18 @@
 //
 
 #import "PDMeViewController.h"
+#import "UIBarButtonItem+PDExtension.h"
 
 @interface PDMeViewController ()
 
 @end
-
+// 我
 @implementation PDMeViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    self.navigationItem.title = @"我的";
+    self.navigationItem.rightBarButtonItems = @[[UIBarButtonItem buttonWithImage:@"mine-setting-icon" highlightImage:@"mine-setting-icon-click"],[UIBarButtonItem buttonWithImage:@"mine-moon-icon" highlightImage:@"mine-moon-icon-click"]];
 }
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-}
-
 @end
