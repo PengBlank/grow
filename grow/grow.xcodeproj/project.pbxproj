@@ -14,6 +14,7 @@
 		8135B2901D7D5AA800E08FC6 /* PDMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8135B28A1D7D5AA800E08FC6 /* PDMeViewController.m */; };
 		8135B2911D7D5AA800E08FC6 /* PDNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8135B28D1D7D5AA800E08FC6 /* PDNewViewController.m */; };
 		8135B2941D7D5AE200E08FC6 /* PDNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8135B2931D7D5AE200E08FC6 /* PDNavigationViewController.m */; };
+		8135B2961D7DF3E900E08FC6 /* PDFriendTrendsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8135B2951D7DF3E800E08FC6 /* PDFriendTrendsViewController.xib */; };
 		815BC9CF1D7C7472006C4959 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 815BC9B81D7C7472006C4959 /* AppDelegate.m */; };
 		815BC9D01D7C7472006C4959 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 815BC9B91D7C7472006C4959 /* Assets.xcassets */; };
 		815BC9D11D7C7472006C4959 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 815BC9BA1D7C7472006C4959 /* Info.plist */; };
@@ -58,6 +59,7 @@
 		8135B28D1D7D5AA800E08FC6 /* PDNewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDNewViewController.m; sourceTree = "<group>"; };
 		8135B2921D7D5AE200E08FC6 /* PDNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDNavigationViewController.h; sourceTree = "<group>"; };
 		8135B2931D7D5AE200E08FC6 /* PDNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDNavigationViewController.m; sourceTree = "<group>"; };
+		8135B2951D7DF3E800E08FC6 /* PDFriendTrendsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PDFriendTrendsViewController.xib; sourceTree = "<group>"; };
 		815BC9B71D7C7472006C4959 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		815BC9B81D7C7472006C4959 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		815BC9B91D7C7472006C4959 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 			children = (
 				8135B2861D7D5AA800E08FC6 /* PDFriendTrendsViewController.h */,
 				8135B2871D7D5AA800E08FC6 /* PDFriendTrendsViewController.m */,
+				8135B2951D7DF3E800E08FC6 /* PDFriendTrendsViewController.xib */,
 			);
 			path = "FriendTrends - 关注";
 			sourceTree = "<group>";
@@ -343,6 +346,7 @@
 			files = (
 				815BC9D11D7C7472006C4959 /* Info.plist in Resources */,
 				815BC9D01D7C7472006C4959 /* Assets.xcassets in Resources */,
+				8135B2961D7DF3E900E08FC6 /* PDFriendTrendsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

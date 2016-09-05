@@ -48,7 +48,7 @@
         [self setupViewController:zuiXinVC title:@"最新" image:@"tabBar_new_icon" selectedImage:@"tabBar_new_click_icon"];
         
         PDFriendTrendsViewController *guanZhuVC = [[PDFriendTrendsViewController alloc]init];
-        guanZhuVC.view.backgroundColor = [UIColor redColor];
+//        guanZhuVC.view.backgroundColor = [UIColor redColor];
         [self setupViewController:guanZhuVC title:@"关注" image:@"tabBar_friendTrends_icon" selectedImage:@"tabBar_friendTrends_click_icon"];
         
         PDMeViewController *meVC = [[PDMeViewController alloc]init];
