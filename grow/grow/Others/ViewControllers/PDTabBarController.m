@@ -12,11 +12,29 @@
 #import "PDFriendTrendsViewController.h"
 #import "PDMeViewController.h"
 #import "PDTabBar.h"
+#import "PDNavigationViewController.h"
+
 @interface PDTabBarController ()
 
 @end
 
 @implementation PDTabBarController
+
++(void)initialize{
+    //设置tabBarItem的属性值(通过appearance全局设置一次)
+    NSMutableDictionary *attrs = [NSMutableDictionary dictionary];
+    attrs[NSFontAttributeName] = [UIFont systemFontOfSize:12];
+    attrs[NSForegroundColorAttributeName] = [UIColor grayColor];
+    
+    NSMutableDictionary *selectedAttrs = [NSMutableDictionary dictionary];
+    selectedAttrs[NSFontAttributeName] = [UIFont systemFontOfSize:12];
+    selectedAttrs[NSForegroundColorAttributeName] = [UIColor darkGrayColor];
+    
+    UITabBarItem *item = [UITabBarItem appearance];
+    [item setTitleTextAttributes:attrs forState:UIControlStateNormal];
+    [item setTitleTextAttributes:selectedAttrs forState:UIControlStateSelected];
+}
+
 
 - (instancetype)init{
     if (self = [super init]) {
@@ -45,20 +63,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    //设置tabBarItem的属性值(通过appearance全局设置一次)
-    NSMutableDictionary *attrs = [NSMutableDictionary dictionary];
-    attrs[NSFontAttributeName] = [UIFont systemFontOfSize:12];
-    attrs[NSForegroundColorAttributeName] = [UIColor grayColor];
-    
-    NSMutableDictionary *selectedAttrs = [NSMutableDictionary dictionary];
-    selectedAttrs[NSFontAttributeName] = [UIFont systemFontOfSize:12];
-    selectedAttrs[NSForegroundColorAttributeName] = [UIColor darkGrayColor];
-    
-    UITabBarItem *item = [UITabBarItem appearance];
-    [item setTitleTextAttributes:attrs forState:UIControlStateNormal];
-    [item setTitleTextAttributes:selectedAttrs forState:UIControlStateSelected];
-
 }
 
 
@@ -75,7 +79,7 @@
     selectImage = [selectImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     viewController.tabBarItem.selectedImage = selectImage;
     
-    UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:viewController];
+    PDNavigationViewController *nav = [[PDNavigationViewController alloc]initWithRootViewController:viewController];
     [self addChildViewController:nav];
 }
 

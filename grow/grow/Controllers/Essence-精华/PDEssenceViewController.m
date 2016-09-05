@@ -25,4 +25,12 @@
     self.navigationItem.titleView = titleView;
 }
 
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    
+    UIViewController *test = [[UIViewController alloc]init];
+    test.view.backgroundColor = [UIColor redColor];
+    [self.navigationController pushViewController:test animated:YES];
+    
+}
+
 @end
