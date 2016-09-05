@@ -20,9 +20,13 @@
     
     UIView *titleView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"MainTitle"]];
     
-    self.navigationItem.leftBarButtonItem = [UIBarButtonItem buttonWithImage:@"MainTagSubIcon" highlightImage:@"MainTagSubIconClick"];
+    self.navigationItem.leftBarButtonItem = [UIBarButtonItem buttonWithImage:@"MainTagSubIcon" highlightImage:@"MainTagSubIconClick" target:self action:@selector(essenceClick)];
     
     self.navigationItem.titleView = titleView;
+}
+
+- (void)essenceClick{
+    
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{

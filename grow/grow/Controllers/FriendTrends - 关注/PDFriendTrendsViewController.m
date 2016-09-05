@@ -8,6 +8,7 @@
 
 #import "PDFriendTrendsViewController.h"
 #import "UIBarButtonItem+PDExtension.h"
+#import "PDRecommendViewController.h"
 //关注
 @interface PDFriendTrendsViewController ()
 
@@ -20,7 +21,13 @@
     
     self.navigationItem.title = @"关注";
     
-    self.navigationItem.leftBarButtonItem = [UIBarButtonItem buttonWithImage:@"friendsRecommentIcon" highlightImage:@"friendsRecommentIcon-click"];
+    self.navigationItem.leftBarButtonItem = [UIBarButtonItem buttonWithImage:@"friendsRecommentIcon" highlightImage:@"friendsRecommentIcon-click" target:self action:@selector(friendClick)];
     
+}
+
+- (void)friendClick{
+//    NSLog(@"friend Click");
+    PDRecommendViewController *recommendVC = [[PDRecommendViewController alloc]init];
+    [self.navigationController pushViewController:recommendVC animated:YES];
 }
 @end

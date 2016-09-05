@@ -10,6 +10,6 @@
 
 @interface UIBarButtonItem (PDExtension)
 
-+ (UIBarButtonItem *)buttonWithImage:(NSString *)imageName highlightImage:(NSString *)highlightImageName;
++ (UIBarButtonItem *)buttonWithImage:(NSString *)imageName highlightImage:(NSString *)highlightImageName target:(id)target action:(SEL)selector;
 
 @end

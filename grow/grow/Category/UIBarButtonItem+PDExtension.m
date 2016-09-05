@@ -10,11 +10,12 @@
 
 @implementation UIBarButtonItem (PDExtension)
 
-+ (UIBarButtonItem *)buttonWithImage:(NSString *)imageName highlightImage:(NSString *)highlightImageName{
++ (UIBarButtonItem *)buttonWithImage:(NSString *)imageName highlightImage:(NSString *)highlightImageName target:(id)target action:(SEL)selector{
     UIButton *leftBarButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [leftBarButton setImage:[UIImage imageNamed:imageName] forState:UIControlStateNormal];
     [leftBarButton setImage:[UIImage imageNamed:highlightImageName] forState:UIControlStateHighlighted];
     [leftBarButton sizeToFit];
+    [leftBarButton addTarget:target action:selector forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem *buttonItem = [[UIBarButtonItem alloc]initWithCustomView:leftBarButton];
     return buttonItem;
 }
