@@ -32,7 +32,7 @@
 
 @implementation PDRecommendViewController
 
-static NSString * const categoryCell = @"CategoryCell";
+static NSString * const categoryCell = @"categoryCell";
 static NSString * const userCell = @"userCell";
 
 
