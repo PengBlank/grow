@@ -1,0 +1,23 @@
+//
+//  PrefixHeader.pch
+//  grow
+//
+//  Created by Luca  on 16/9/8.
+//  Copyright © 2016年 snow. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#ifdef DEBUG
+    #define PDLog(...) NSLog(__VA__ARGS)
+#else
+    #define PDLog(...)
+#endif
+
+
+#define PDRGBColor(r,g,b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
+
+#define PDGlobalBG PDRGBColor(233, 233, 233)
+
+#endif 

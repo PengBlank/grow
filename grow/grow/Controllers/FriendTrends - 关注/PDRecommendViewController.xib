@@ -30,7 +30,8 @@
                 </tableView>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="70" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qMv-Ta-4Cz" userLabel="右边详情的tableview">
                     <rect key="frame" x="70" y="0.0" width="305" height="667"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" red="0.91321443260000001" green="0.91545024669999997" blue="0.91347142270000004" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="sectionIndexBackgroundColor" red="0.91321443256578949" green="0.91545024671052633" blue="0.91347142269736847" alpha="1" colorSpace="calibratedRGB"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="W5T-0w-yOo"/>
                         <outlet property="delegate" destination="-1" id="Vzm-yV-1Vc"/>

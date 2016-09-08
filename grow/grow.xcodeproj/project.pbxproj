@@ -66,6 +66,7 @@
 		812CE8F51D816E1E00C470C1 /* PDUserCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDUserCell.h; sourceTree = "<group>"; };
 		812CE8F61D816E1E00C470C1 /* PDUserCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDUserCell.m; sourceTree = "<group>"; };
 		812CE8F71D816E1E00C470C1 /* PDUserCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PDUserCell.xib; sourceTree = "<group>"; };
+		812CE8FB1D81BE4E00C470C1 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		8135B2831D7D5AA800E08FC6 /* PDEssenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDEssenceViewController.h; sourceTree = "<group>"; };
 		8135B2841D7D5AA800E08FC6 /* PDEssenceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDEssenceViewController.m; sourceTree = "<group>"; };
 		8135B2861D7D5AA800E08FC6 /* PDFriendTrendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDFriendTrendsViewController.h; sourceTree = "<group>"; };
@@ -253,6 +254,7 @@
 				815BC9B91D7C7472006C4959 /* Assets.xcassets */,
 				815BC9BA1D7C7472006C4959 /* Info.plist */,
 				815BC9BB1D7C7472006C4959 /* main.m */,
+				812CE8FB1D81BE4E00C470C1 /* PrefixHeader.pch */,
 			);
 			path = Others;
 			sourceTree = "<group>";
@@ -647,6 +649,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/grow/Others/PrefixHeader.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/grow/Others/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = PD.grow;
@@ -660,6 +663,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/grow/Others/PrefixHeader.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/grow/Others/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = PD.grow;

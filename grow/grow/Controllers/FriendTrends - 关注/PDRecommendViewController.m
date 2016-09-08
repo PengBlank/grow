@@ -22,7 +22,6 @@
 @property (nonatomic, strong) NSArray *categories;
 //推荐的用户
 @property (nonatomic, strong) NSArray *users;
-
 //左边类别table
 @property (weak, nonatomic) IBOutlet UITableView *categoryTableView;
 //右边详情table
@@ -39,7 +38,7 @@ static NSString * const userCell = @"userCell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.title = @"推荐关注";
-    self.view.backgroundColor = [UIColor lightGrayColor];
+    self.view.backgroundColor = PDGlobalBG;
     
     self.automaticallyAdjustsScrollViewInsets = NO;
     
