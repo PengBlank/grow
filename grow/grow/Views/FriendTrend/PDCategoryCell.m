@@ -22,7 +22,6 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-//    self.backgroundColor = [UIColor grayColor];
 }
 
 - (void)setCategory:(PDCategoryModel *)category{
