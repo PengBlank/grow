@@ -8,6 +8,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PDRecommendViewController">
             <connections>
                 <outlet property="categoryTableView" destination="G5n-yw-7YT" id="sTA-sc-u7l"/>
+                <outlet property="detailTableView" destination="qMv-Ta-4Cz" id="yY3-OZ-pMO"/>
                 <outlet property="view" destination="iN0-l3-epB" id="ci1-qm-Jgr"/>
             </connections>
         </placeholder>
@@ -27,11 +28,23 @@
                         <outlet property="delegate" destination="-1" id="VQY-Ve-MvZ"/>
                     </connections>
                 </tableView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qMv-Ta-4Cz" userLabel="右边详情的tableview">
+                    <rect key="frame" x="70" y="0.0" width="305" height="667"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="W5T-0w-yOo"/>
+                        <outlet property="delegate" destination="-1" id="Vzm-yV-1Vc"/>
+                    </connections>
+                </tableView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstAttribute="trailing" secondItem="qMv-Ta-4Cz" secondAttribute="trailing" id="6N7-wJ-IKN"/>
                 <constraint firstAttribute="bottom" secondItem="G5n-yw-7YT" secondAttribute="bottom" id="CfI-L0-Yay"/>
+                <constraint firstItem="qMv-Ta-4Cz" firstAttribute="leading" secondItem="G5n-yw-7YT" secondAttribute="trailing" id="PMk-tV-v9Y"/>
                 <constraint firstAttribute="trailing" secondItem="G5n-yw-7YT" secondAttribute="trailing" constant="70" id="YeB-H4-0jn"/>
+                <constraint firstAttribute="bottom" secondItem="qMv-Ta-4Cz" secondAttribute="bottom" id="e63-G6-N5q"/>
+                <constraint firstItem="qMv-Ta-4Cz" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="fck-XW-50L"/>
                 <constraint firstItem="G5n-yw-7YT" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="uUl-kO-efz"/>
                 <constraint firstItem="G5n-yw-7YT" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="yeH-2K-GeM"/>
             </constraints>

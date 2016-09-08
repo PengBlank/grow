@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		8108422A1D6F54F0000F7545 /* growTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 810842291D6F54F0000F7545 /* growTests.m */; };
 		810842351D6F54F0000F7545 /* growUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 810842341D6F54F0000F7545 /* growUITests.m */; };
+		812CE8F41D816BC900C470C1 /* PDUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 812CE8F31D816BC900C470C1 /* PDUserModel.m */; };
+		812CE8F81D816E1E00C470C1 /* PDUserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 812CE8F61D816E1E00C470C1 /* PDUserCell.m */; };
+		812CE8F91D816E1E00C470C1 /* PDUserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 812CE8F71D816E1E00C470C1 /* PDUserCell.xib */; };
 		8135B28E1D7D5AA800E08FC6 /* PDEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8135B2841D7D5AA800E08FC6 /* PDEssenceViewController.m */; };
 		8135B28F1D7D5AA800E08FC6 /* PDFriendTrendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8135B2871D7D5AA800E08FC6 /* PDFriendTrendsViewController.m */; };
 		8135B2901D7D5AA800E08FC6 /* PDMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8135B28A1D7D5AA800E08FC6 /* PDMeViewController.m */; };
@@ -58,6 +61,11 @@
 		810842301D6F54F0000F7545 /* growUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = growUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		810842341D6F54F0000F7545 /* growUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = growUITests.m; sourceTree = "<group>"; };
 		810842361D6F54F0000F7545 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		812CE8F21D816BC900C470C1 /* PDUserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDUserModel.h; sourceTree = "<group>"; };
+		812CE8F31D816BC900C470C1 /* PDUserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDUserModel.m; sourceTree = "<group>"; };
+		812CE8F51D816E1E00C470C1 /* PDUserCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDUserCell.h; sourceTree = "<group>"; };
+		812CE8F61D816E1E00C470C1 /* PDUserCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDUserCell.m; sourceTree = "<group>"; };
+		812CE8F71D816E1E00C470C1 /* PDUserCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PDUserCell.xib; sourceTree = "<group>"; };
 		8135B2831D7D5AA800E08FC6 /* PDEssenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDEssenceViewController.h; sourceTree = "<group>"; };
 		8135B2841D7D5AA800E08FC6 /* PDEssenceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDEssenceViewController.m; sourceTree = "<group>"; };
 		8135B2861D7D5AA800E08FC6 /* PDFriendTrendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDFriendTrendsViewController.h; sourceTree = "<group>"; };
@@ -283,6 +291,8 @@
 			children = (
 				81C916BC1D7F176F002433FD /* PDCategoryModel.h */,
 				81C916BD1D7F176F002433FD /* PDCategoryModel.m */,
+				812CE8F21D816BC900C470C1 /* PDUserModel.h */,
+				812CE8F31D816BC900C470C1 /* PDUserModel.m */,
 			);
 			path = FriendsTrend;
 			sourceTree = "<group>";
@@ -293,6 +303,9 @@
 				81C916C21D7F1B4D002433FD /* PDCategoryCell.h */,
 				81C916C31D7F1B4D002433FD /* PDCategoryCell.m */,
 				81C916C41D7F1B4D002433FD /* PDCategoryCell.xib */,
+				812CE8F51D816E1E00C470C1 /* PDUserCell.h */,
+				812CE8F61D816E1E00C470C1 /* PDUserCell.m */,
+				812CE8F71D816E1E00C470C1 /* PDUserCell.xib */,
 			);
 			path = FriendTrend;
 			sourceTree = "<group>";
@@ -420,6 +433,7 @@
 				81C916C61D7F1B4D002433FD /* PDCategoryCell.xib in Resources */,
 				815BC9D01D7C7472006C4959 /* Assets.xcassets in Resources */,
 				8135B2961D7DF3E900E08FC6 /* PDFriendTrendsViewController.xib in Resources */,
+				812CE8F91D816E1E00C470C1 /* PDUserCell.xib in Resources */,
 				81C916C01D7F1866002433FD /* PDRecommendViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -493,6 +507,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				812CE8F81D816E1E00C470C1 /* PDUserCell.m in Sources */,
 				815BC9D31D7C7472006C4959 /* PDTabBarController.m in Sources */,
 				8135B28E1D7D5AA800E08FC6 /* PDEssenceViewController.m in Sources */,
 				8135B2941D7D5AE200E08FC6 /* PDNavigationViewController.m in Sources */,
@@ -503,6 +518,7 @@
 				815BC9D21D7C7472006C4959 /* main.m in Sources */,
 				815BC9D81D7C7472006C4959 /* PDTabBar.m in Sources */,
 				81C916C51D7F1B4D002433FD /* PDCategoryCell.m in Sources */,
+				812CE8F41D816BC900C470C1 /* PDUserModel.m in Sources */,
 				8135B2911D7D5AA800E08FC6 /* PDNewViewController.m in Sources */,
 				8135B2991D7DFE9500E08FC6 /* PDRecommendViewController.m in Sources */,
 				815BC9CF1D7C7472006C4959 /* AppDelegate.m in Sources */,
