@@ -16,4 +16,8 @@
 @property (nonatomic, assign) NSInteger id;
 
 
+///该类别对应的user数据
+@property (nonatomic, strong) NSMutableArray *users;
+
+
 @end

@@ -21,7 +21,10 @@
 //存放请求的类别数据
 @property (nonatomic, strong) NSArray *categories;
 //推荐的用户
-@property (nonatomic, strong) NSArray *users;
+//@property (nonatomic, strong) NSArray *users;
+
+@property (nonatomic, strong) PDCategoryModel *category;
+
 //左边类别table
 @property (weak, nonatomic) IBOutlet UITableView *categoryTableView;
 //右边详情table
@@ -81,7 +84,7 @@ static NSString * const userCell = @"userCell";
     if (tableView == self.categoryTableView) {
         return self.categories.count;
     } else {
-        return self.users.count;
+        return self.category.users.count;
     }
     
 }
@@ -94,7 +97,9 @@ static NSString * const userCell = @"userCell";
         return cell;
     } else {
         PDUserCell *cell = [tableView dequeueReusableCellWithIdentifier:userCell];
-        cell.user = self.users[indexPath.row];
+//        cell.user = self.users[indexPath.row];
+//        cell.user = ((PDCategoryModel *)self.categories[indexPath.row]).users[indexPath.row];
+        cell.user = self.category.users[indexPath.row];
         return cell;
     }
 }
@@ -104,24 +109,36 @@ static NSString * const userCell = @"userCell";
 #pragma mark - UITableViewDelegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    NSMutableDictionary *paras = [NSMutableDictionary dictionary];
-    NSString *userlUrlString = @"http://api.budejie.com/api/api_open.php";//左侧类别对应的推荐用户组url
-    PDCategoryModel *category = self.categories[indexPath.row];
-    NSInteger category_id = category.id;
-    if (tableView == self.categoryTableView) {
-        //用户请求
-        paras[@"a"] = @"list";
-        paras[@"c"] = @"subscribe";
-        paras[@"category_id"] = @(category_id);
-        [[AFHTTPSessionManager manager] GET:userlUrlString parameters:paras progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-            NSLog(@"%@",responseObject);
-            self.users = [PDUserModel mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
-            [SVProgressHUD dismiss];
-            [self.detailTableView reloadData];
-        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-            [SVProgressHUD showErrorWithStatus:@"请求错误!!!"];
-            NSLog(@"failure");
-        }];
+    
+//    PDCategoryModel *category = self.categories[indexPath.row];
+    self.category = self.categories[indexPath.row];
+    if (_category.users.count != 0) {//如果缓存有数据，则用缓存数据，否则网络请求新的数据.
+        [self.detailTableView reloadData];
+    } else {
+        NSMutableDictionary *paras = [NSMutableDictionary dictionary];
+        NSString *userlUrlString = @"http://api.budejie.com/api/api_open.php";//左侧类别对应的推荐用户组url
+//        PDCategoryModel *category = self.categories[indexPath.row];
+        NSInteger category_id = _category.id;
+        if (tableView == self.categoryTableView) {
+            //用户请求
+            paras[@"a"] = @"list";
+            paras[@"c"] = @"subscribe";
+            paras[@"category_id"] = @(category_id);
+            [[AFHTTPSessionManager manager] GET:userlUrlString parameters:paras progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+                NSLog(@"%@",responseObject);
+//                self.users = [PDUserModel mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
+                _category.users = [PDUserModel mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
+                
+                [SVProgressHUD dismiss];
+                [self.detailTableView reloadData];
+            } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+                [SVProgressHUD showErrorWithStatus:@"请求错误!!!"];
+                NSLog(@"failure");
+            }];
+        }
     }
+    
+    
+
 }
 @end
