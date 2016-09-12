@@ -10,7 +10,7 @@
 #define PrefixHeader_pch
 
 #ifdef DEBUG
-    #define PDLog(...) NSLog(__VA__ARGS)
+    #define PDLog(...) NSLog(__VA_ARGS__)
 #else
     #define PDLog(...)
 #endif

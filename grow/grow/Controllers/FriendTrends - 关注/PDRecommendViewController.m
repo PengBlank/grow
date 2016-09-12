@@ -8,22 +8,23 @@
 
 #import "PDRecommendViewController.h"
 #import <MJExtension.h>
+#import <MJRefresh.h>
 #import <AFNetworking.h>
 #import <SVProgressHUD.h>
 #import "PDCategoryModel.h"
 #import "PDCategoryCell.h"
 #import "PDUserModel.h"
 #import "PDUserCell.h"
-
+#import <MJRefreshFooter.h>
 
 @interface PDRecommendViewController () <UITableViewDelegate, UITableViewDataSource>
 
 //存放请求的类别数据
 @property (nonatomic, strong) NSArray *categories;
 //推荐的用户
-//@property (nonatomic, strong) NSArray *users;
+@property (nonatomic, strong) NSArray *users;
 
-@property (nonatomic, strong) PDCategoryModel *category;
+//@property (nonatomic, strong) PDCategoryModel *category;
 
 //左边类别table
 @property (weak, nonatomic) IBOutlet UITableView *categoryTableView;
@@ -48,6 +49,15 @@ static NSString * const userCell = @"userCell";
     [self.categoryTableView setContentInset:UIEdgeInsetsMake(64, 0, 0, 0)];
     [self.detailTableView setContentInset:UIEdgeInsetsMake(64, 0, 0, 0)];
     self.detailTableView.rowHeight = 70;
+   
+    [self setUpTableView];//初始化tableView
+    
+    self.detailTableView.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(showMoreData)];//上拉刷新
+}
+
+
+
+- (void)setUpTableView{
     //注册categoryCell
     [self.categoryTableView registerNib:[UINib nibWithNibName:NSStringFromClass([PDCategoryCell class]) bundle:[NSBundle mainBundle]] forCellReuseIdentifier:categoryCell];
     
@@ -57,11 +67,11 @@ static NSString * const userCell = @"userCell";
     //显示蒙板
     [SVProgressHUD show];
     [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeBlack];
-
+    
     //发送类别请求
     NSMutableDictionary *paras = [NSMutableDictionary dictionary];
     NSString *urlString = @"http://api.budejie.com/api/api_open.php";//类别url地址
-
+    
     
     paras[@"a"] = @"category";
     paras[@"c"] = @"subscribe";
@@ -74,9 +84,12 @@ static NSString * const userCell = @"userCell";
         NSLog(@"failure");
     }];
 
-    
 }
 
+
+- (void)showMoreData{
+    PDLog(@"Show More Data!!");
+}
 
 #pragma mark - UITableViewDataSource
 
@@ -84,7 +97,8 @@ static NSString * const userCell = @"userCell";
     if (tableView == self.categoryTableView) {
         return self.categories.count;
     } else {
-        return self.category.users.count;
+        PDCategoryModel *category = self.categories[self.categoryTableView.indexPathForSelectedRow.row];
+        return category.users.count;
     }
     
 }
@@ -97,9 +111,10 @@ static NSString * const userCell = @"userCell";
         return cell;
     } else {
         PDUserCell *cell = [tableView dequeueReusableCellWithIdentifier:userCell];
-//        cell.user = self.users[indexPath.row];
-//        cell.user = ((PDCategoryModel *)self.categories[indexPath.row]).users[indexPath.row];
-        cell.user = self.category.users[indexPath.row];
+        PDCategoryModel *category = self.categories[self.categoryTableView.indexPathForSelectedRow.row];
+        //不能用下面这种方式寻找对应的模型，找到的模型应该为选中类别对应的users.
+//        PDCategoryModel *category = self.categories[indexPath.row];
+        cell.user = category.users[indexPath.row];
         return cell;
     }
 }
@@ -110,15 +125,14 @@ static NSString * const userCell = @"userCell";
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
-//    PDCategoryModel *category = self.categories[indexPath.row];
-    self.category = self.categories[indexPath.row];
-    if (_category.users.count != 0) {//如果缓存有数据，则用缓存数据，否则网络请求新的数据.
+    PDCategoryModel *tmpeCategory = self.categories[indexPath.row];
+    if (tmpeCategory.users.count != 0) {//如果缓存有数据，则用缓存数据，否则网络请求新的数据.
         [self.detailTableView reloadData];
     } else {
         NSMutableDictionary *paras = [NSMutableDictionary dictionary];
         NSString *userlUrlString = @"http://api.budejie.com/api/api_open.php";//左侧类别对应的推荐用户组url
 //        PDCategoryModel *category = self.categories[indexPath.row];
-        NSInteger category_id = _category.id;
+        NSInteger category_id = tmpeCategory.id;
         if (tableView == self.categoryTableView) {
             //用户请求
             paras[@"a"] = @"list";
@@ -126,11 +140,12 @@ static NSString * const userCell = @"userCell";
             paras[@"category_id"] = @(category_id);
             [[AFHTTPSessionManager manager] GET:userlUrlString parameters:paras progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
                 NSLog(@"%@",responseObject);
-//                self.users = [PDUserModel mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
-                _category.users = [PDUserModel mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
-                
+                self.users = [PDUserModel mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
+                [tmpeCategory.users addObjectsFromArray:self.users];
+//                category.users = [PDUserModel mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
                 [SVProgressHUD dismiss];
                 [self.detailTableView reloadData];
+//                [self.detailTableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:YES];
             } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
                 [SVProgressHUD showErrorWithStatus:@"请求错误!!!"];
                 NSLog(@"failure");
