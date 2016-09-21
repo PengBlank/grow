@@ -15,7 +15,6 @@
 #import "PDCategoryCell.h"
 #import "PDUserModel.h"
 #import "PDUserCell.h"
-#import <MJRefreshFooter.h>
 
 
 #define selectedCategory self.categories[self.categoryTableView.indexPathForSelectedRow.row]
@@ -32,7 +31,7 @@
 //左边类别table
 @property (weak, nonatomic) IBOutlet UITableView *categoryTableView;
 //右边详情table
-@property (weak, nonatomic) IBOutlet UITableView *detailTableView;
+@property (weak, nonatomic) IBOutlet UITableView *userTableView;
 
 @end
 
@@ -59,13 +58,13 @@ static NSString * const userCell = @"userCell";
 - (void)setUpTableView{
     
     [self.categoryTableView setContentInset:UIEdgeInsetsMake(64, 0, 0, 0)];
-    [self.detailTableView setContentInset:UIEdgeInsetsMake(64, 0, 0, 0)];
-    self.detailTableView.rowHeight = 70;
+    [self.userTableView setContentInset:UIEdgeInsetsMake(64, 0, 0, 0)];
+    self.userTableView.rowHeight = 70;
     //注册categoryCell
     [self.categoryTableView registerNib:[UINib nibWithNibName:NSStringFromClass([PDCategoryCell class]) bundle:[NSBundle mainBundle]] forCellReuseIdentifier:categoryCell];
     
     //注册UserCell
-    [self.detailTableView registerNib:[UINib nibWithNibName:NSStringFromClass([PDUserCell class]) bundle:[NSBundle mainBundle]] forCellReuseIdentifier:userCell];
+    [self.userTableView registerNib:[UINib nibWithNibName:NSStringFromClass([PDUserCell class]) bundle:[NSBundle mainBundle]] forCellReuseIdentifier:userCell];
     
     //显示蒙板
     [SVProgressHUD show];
@@ -89,7 +88,9 @@ static NSString * const userCell = @"userCell";
 
 
 - (void)setUpRefresh{
-    self.detailTableView.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(showMoreData)];//上拉刷新
+    self.userTableView.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(showMoreData)];//上拉刷新
+    
+    
 }
 
 
@@ -116,11 +117,11 @@ static NSString * const userCell = @"userCell";
         tempCategory.total = total;
         if (tempCategory.users.count < total) {//当还有数据时
 //            tempCategory.currentPage = 
-            [self.detailTableView.mj_footer endRefreshing];
+            [self.userTableView.mj_footer endRefreshing];
         } else {//当没有更多数据
-            [self.detailTableView.mj_footer endRefreshingWithNoMoreData];
+            [self.userTableView.mj_footer endRefreshingWithNoMoreData];
         }
-        [self.detailTableView reloadData];
+        [self.userTableView reloadData];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         [SVProgressHUD showErrorWithStatus:@"请求错误!!!"];
         NSLog(@"failure");
@@ -136,7 +137,7 @@ static NSString * const userCell = @"userCell";
     } else {
         PDCategoryModel *category = self.categories[self.categoryTableView.indexPathForSelectedRow.row];
         //当类别没有对应的用户数据时，隐藏刷新控件
-        self.detailTableView.mj_footer.hidden = (category.users.count == 0);
+        self.userTableView.mj_footer.hidden = (category.users.count == 0);
         return category.users.count;
     }
     
@@ -167,8 +168,11 @@ static NSString * const userCell = @"userCell";
     NSInteger currentPage = 1;
     PDCategoryModel *tmpeCategory = self.categories[indexPath.row];
     if (tmpeCategory.users.count != 0) {//如果缓存有数据，则用缓存数据，否则网络请求新的数据.
-        [self.detailTableView reloadData];
+        [self.userTableView reloadData];
     } else {
+        //选中类别后立即刷新user数据
+        [self.userTableView reloadData];
+        
         NSMutableDictionary *paras = [NSMutableDictionary dictionary];
         NSString *userlUrlString = @"http://api.budejie.com/api/api_open.php";//左侧类别对应的推荐用户组url
         NSInteger category_id = tmpeCategory.id;
@@ -188,11 +192,11 @@ static NSString * const userCell = @"userCell";
                 NSInteger total = [responseObject[@"total"] integerValue];
                 tmpeCategory.total = total;
                 if (users.count < total) {//当有多页数据时
-                    [self.detailTableView.mj_footer endRefreshing];
+                    [self.userTableView.mj_footer endRefreshing];
                 } else {//当只有一页数据
-                    [self.detailTableView.mj_footer endRefreshingWithNoMoreData];
+                    [self.userTableView.mj_footer endRefreshingWithNoMoreData];
                 }
-                [self.detailTableView reloadData];
+                [self.userTableView reloadData];
             } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
                 [SVProgressHUD showErrorWithStatus:@"请求错误!!!"];
                 NSLog(@"failure");
