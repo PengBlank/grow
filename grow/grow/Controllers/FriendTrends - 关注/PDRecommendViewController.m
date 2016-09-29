@@ -23,11 +23,6 @@
 
 //存放请求的类别数据
 @property (nonatomic, strong) NSArray *categories;
-//推荐的用户
-//@property (nonatomic, strong) NSArray *users;
-
-//@property (nonatomic, strong) PDCategoryModel *category;
-
 //左边类别table
 @property (weak, nonatomic) IBOutlet UITableView *categoryTableView;
 //右边详情table
@@ -88,8 +83,43 @@ static NSString * const userCell = @"userCell";
 
 
 - (void)setUpRefresh{
+    self.userTableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewData)];
     self.userTableView.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(showMoreData)];//上拉刷新
 }
+
+
+- (void)loadNewData{
+
+    NSInteger currentPage = 1;
+    NSMutableDictionary *paras = [NSMutableDictionary dictionary];
+    NSString *userlUrlString = @"http://api.budejie.com/api/api_open.php";//左侧类别对应的推荐用户组url
+    PDCategoryModel *selectModel = ((PDCategoryModel *)selectedCategory);//当前选中的模型
+    NSInteger category_id =selectModel.id;
+    selectModel.currentPage = currentPage;
+        //用户请求
+        paras[@"a"] = @"list";
+        paras[@"c"] = @"subscribe";
+        paras[@"category_id"] = @(category_id);
+        paras[@"page"] = @(currentPage);
+        [[AFHTTPSessionManager manager] GET:userlUrlString parameters:paras progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+            PDLog(@"%@",responseObject);
+            [SVProgressHUD dismiss];
+            NSArray *users = [NSArray array];
+            users = [PDUserModel mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
+            [selectModel.users addObjectsFromArray:users];
+            ///该类别对应的user总数
+            NSInteger total = [responseObject[@"total"] integerValue];
+            selectModel.total = total;
+            if (users.count < total) {//当有多页数据时
+                [self.userTableView.mj_header endRefreshing];
+            } 
+            [self.userTableView reloadData];
+        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+            [SVProgressHUD showErrorWithStatus:@"请求错误!!!"];
+            NSLog(@"failure");
+        }];
+    }
+
 
 
 - (void)showMoreData{
@@ -164,44 +194,16 @@ static NSString * const userCell = @"userCell";
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
     if (tableView == self.categoryTableView) {
-        NSInteger currentPage = 1;
         PDCategoryModel *tmpeCategory = self.categories[indexPath.row];
         if (tmpeCategory.users.count != 0) {//如果缓存有数据，则用缓存数据，否则网络请求新的数据.
             [self.userTableView reloadData];
         } else {
+            
+            
             //选中类别后立即刷新user数据, 以防显示老数据
             [self.userTableView reloadData];
-            
-            NSMutableDictionary *paras = [NSMutableDictionary dictionary];
-            NSString *userlUrlString = @"http://api.budejie.com/api/api_open.php";//左侧类别对应的推荐用户组url
-            NSInteger category_id = tmpeCategory.id;
-            tmpeCategory.currentPage = currentPage;
-            if (tableView == self.categoryTableView) {
-                //用户请求
-                paras[@"a"] = @"list";
-                paras[@"c"] = @"subscribe";
-                paras[@"category_id"] = @(category_id);
-                paras[@"page"] = @(tmpeCategory.currentPage);
-                [[AFHTTPSessionManager manager] GET:userlUrlString parameters:paras progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-                    PDLog(@"%@",responseObject);
-                    [SVProgressHUD dismiss];
-                    NSArray *users = [NSArray array];
-                    users = [PDUserModel mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
-                    [tmpeCategory.users addObjectsFromArray:users];
-                    ///该类别对应的user总数
-                    NSInteger total = [responseObject[@"total"] integerValue];
-                    tmpeCategory.total = total;
-                    if (users.count < total) {//当有多页数据时
-                        [self.userTableView.mj_footer endRefreshing];
-                    } else {//当只有一页数据
-                        [self.userTableView.mj_footer endRefreshingWithNoMoreData];
-                    }
-                    [self.userTableView reloadData];
-                } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-                    [SVProgressHUD showErrorWithStatus:@"请求错误!!!"];
-                    NSLog(@"failure");
-                }];
-            }
+            [self.userTableView.mj_header beginRefreshing];
+//            [self loadNewData];
         }
         
     } else {
