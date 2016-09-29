@@ -8,7 +8,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PDRecommendViewController">
             <connections>
                 <outlet property="categoryTableView" destination="G5n-yw-7YT" id="sTA-sc-u7l"/>
-                <outlet property="detailTableView" destination="qMv-Ta-4Cz" id="yY3-OZ-pMO"/>
+                <outlet property="userTableView" destination="qMv-Ta-4Cz" id="uKo-KY-IvO"/>
                 <outlet property="view" destination="iN0-l3-epB" id="ci1-qm-Jgr"/>
             </connections>
         </placeholder>

@@ -49,9 +49,12 @@
         [backItem sizeToFit];
         
         viewController.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:backItem];
+        //隐藏Tabbar
+        viewController.hidesBottomBarWhenPushed = YES;
     }
     //这句代码放在后面，让viewController可以覆盖上面设置的leftBarButtonItem.
     [super pushViewController:viewController animated:animated];
+
 }
 
 - (void)back{
