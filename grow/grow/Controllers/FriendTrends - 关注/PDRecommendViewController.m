@@ -74,6 +74,10 @@ static NSString * const userCell = @"userCell";
         self.categories = [PDCategoryModel mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
         [SVProgressHUD dismiss];
         [self.categoryTableView reloadData];
+        //默认显示第一个类别对应的用户数据
+        NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
+        [self.categoryTableView selectRowAtIndexPath:indexPath animated:NO  scrollPosition:UITableViewScrollPositionTop];
+        [self loadNewData];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         [SVProgressHUD showErrorWithStatus:@"请求错误!!!"];
         NSLog(@"failure");
@@ -104,15 +108,17 @@ static NSString * const userCell = @"userCell";
         [[AFHTTPSessionManager manager] GET:userlUrlString parameters:paras progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
             PDLog(@"%@",responseObject);
             [SVProgressHUD dismiss];
+            [selectModel.users removeAllObjects];//每次下拉刷新都清楚上一次数据。
             NSArray *users = [NSArray array];
             users = [PDUserModel mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
+            
             [selectModel.users addObjectsFromArray:users];
             ///该类别对应的user总数
             NSInteger total = [responseObject[@"total"] integerValue];
             selectModel.total = total;
-            if (users.count < total) {//当有多页数据时
+//            if (users.count < total) {//当有多页数据时
                 [self.userTableView.mj_header endRefreshing];
-            } 
+//            } 
             [self.userTableView reloadData];
         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
             [SVProgressHUD showErrorWithStatus:@"请求错误!!!"];
@@ -198,8 +204,6 @@ static NSString * const userCell = @"userCell";
         if (tmpeCategory.users.count != 0) {//如果缓存有数据，则用缓存数据，否则网络请求新的数据.
             [self.userTableView reloadData];
         } else {
-            
-            
             //选中类别后立即刷新user数据, 以防显示老数据
             [self.userTableView reloadData];
             [self.userTableView.mj_header beginRefreshing];
