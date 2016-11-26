@@ -96,27 +96,27 @@ static NSString * const userCell = @"userCell";
 
     NSInteger currentPage = 1;
     NSMutableDictionary *paras = [NSMutableDictionary dictionary];
-    NSString *userlUrlString = @"http://api.budejie.com/api/api_open.php";//左侧类别对应的推荐用户组url
+    NSString *userUrlString = @"http://api.budejie.com/api/api_open.php";//左侧类别对应的推荐用户组url
     PDCategoryModel *selectModel = ((PDCategoryModel *)selectedCategory);//当前选中的模型
-    NSInteger category_id =selectModel.id;
+    NSInteger category_id = selectModel.id;
     selectModel.currentPage = currentPage;
         //用户请求
         paras[@"a"] = @"list";
         paras[@"c"] = @"subscribe";
         paras[@"category_id"] = @(category_id);
         paras[@"page"] = @(currentPage);
-        [[AFHTTPSessionManager manager] GET:userlUrlString parameters:paras progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        [[AFHTTPSessionManager manager] GET:userUrlString parameters:paras progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
             PDLog(@"%@",responseObject);
             [SVProgressHUD dismiss];
-            [selectModel.users removeAllObjects];//每次下拉刷新都清楚上一次数据。
+            [selectModel.users removeAllObjects];//每次下拉刷新都清除上一次数据。
             NSArray *users = [NSArray array];
             users = [PDUserModel mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
             
             [selectModel.users addObjectsFromArray:users];
             ///该类别对应的user总数
-            NSInteger total = [responseObject[@"total"] integerValue];
-            selectModel.total = total;
-//            if (users.count < total) {//当有多页数据时
+//            NSInteger total = [responseObject[@"total"] integerValue];
+//            selectModel.total = total;
+//            if (users.count < total) {//当有多页数据时  ？？下拉刷新数据不需要判断是否有多页数据?
                 [self.userTableView.mj_header endRefreshing];
 //            } 
             [self.userTableView reloadData];
