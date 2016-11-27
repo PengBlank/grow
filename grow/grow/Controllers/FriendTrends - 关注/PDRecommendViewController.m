@@ -201,7 +201,7 @@ static NSString * const userCell = @"userCell";
     
     if (tableView == self.categoryTableView) {
         PDCategoryModel *tmpeCategory = self.categories[indexPath.row];
-        if (tmpeCategory.users.count != 0) {//如果缓存有数据，则用缓存数据，否则网络请求新的数据.
+        if (tmpeCategory.users.count) {//如果缓存有数据，则用缓存数据，否则网络请求新的数据.
             [self.userTableView reloadData];
         } else {
             //选中类别后立即刷新user数据, 以防显示老数据

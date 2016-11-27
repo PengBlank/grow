@@ -31,8 +31,8 @@
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
-    self.lineView.backgroundColor = selected?[UIColor redColor]:PDRGBColor(239, 239, 239);
-    self.textLabel.textColor = selected?[UIColor redColor]:PDRGBColor(100, 100, 100);
+    self.lineView.backgroundColor = selected ? [UIColor redColor] : PDRGBColor(239, 239, 239);
+    self.textLabel.textColor = selected ? [UIColor redColor] : PDRGBColor(100, 100, 100);
 }
 
 - (void)layoutSubviews{
