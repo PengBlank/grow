@@ -87,7 +87,8 @@ static NSString * const userCell = @"userCell";
 
 
 - (void)setUpRefresh{
-    self.userTableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewData)];
+    
+    self.userTableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewData)];//下拉刷新
     self.userTableView.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(showMoreData)];//上拉刷新
 }
 
@@ -108,20 +109,26 @@ static NSString * const userCell = @"userCell";
         [[AFHTTPSessionManager manager] GET:userUrlString parameters:paras progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
             PDLog(@"%@",responseObject);
             [SVProgressHUD dismiss];
+            selectModel.total = [[responseObject objectForKey:@"total"] intValue];//取得当前数据的总数
             [selectModel.users removeAllObjects];//每次下拉刷新都清除上一次数据。
             NSArray *users = [NSArray array];
             users = [PDUserModel mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
             
             [selectModel.users addObjectsFromArray:users];
-            ///该类别对应的user总数
-//            NSInteger total = [responseObject[@"total"] integerValue];
-//            selectModel.total = total;
-//            if (users.count < total) {//当有多页数据时  ？？下拉刷新数据不需要判断是否有多页数据?
-                [self.userTableView.mj_header endRefreshing];
-//            } 
+            
             [self.userTableView reloadData];
+
+            [self.userTableView.mj_header endRefreshing];
+            //下拉刷新需要判断foot的显示，否则foot可能显示错误(当第一页为最后一页数据时)
+            if(selectModel.users.count == selectModel.total){//当数据加载完成,结束刷新并提示没有更多数据
+                [self.userTableView.mj_footer endRefreshingWithNoMoreData];
+            }else{//结束刷新
+                [self.userTableView.mj_footer endRefreshing];
+            }
+            
         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
             [SVProgressHUD showErrorWithStatus:@"请求错误!!!"];
+            [self.userTableView.mj_header endRefreshing]; //失败也要结束下拉刷新
             NSLog(@"failure");
         }];
     }
@@ -147,10 +154,8 @@ static NSString * const userCell = @"userCell";
         users = [PDUserModel mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
         [tempCategory.users addObjectsFromArray:users];
         ///该类别对应的user总数
-        NSInteger total = [responseObject[@"total"] integerValue];
-        tempCategory.total = total;
-        if (tempCategory.users.count < total) {//当还有数据时
-//            tempCategory.currentPage = 
+        tempCategory.total = [responseObject[@"total"] integerValue];
+        if (tempCategory.users.count < tempCategory.total) {//当还有数据时
             [self.userTableView.mj_footer endRefreshing];
         } else {//当没有更多数据
             [self.userTableView.mj_footer endRefreshingWithNoMoreData];
@@ -158,13 +163,13 @@ static NSString * const userCell = @"userCell";
         [self.userTableView reloadData];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         [SVProgressHUD showErrorWithStatus:@"请求错误!!!"];
+        [self.userTableView.mj_footer endRefreshing];
         NSLog(@"failure");
     }];
 
 }
 
 #pragma mark - UITableViewDataSource
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     if (tableView == self.categoryTableView) {
         return self.categories.count;
@@ -172,6 +177,15 @@ static NSString * const userCell = @"userCell";
         PDCategoryModel *category = self.categories[self.categoryTableView.indexPathForSelectedRow.row];
         //当类别没有对应的用户数据时，隐藏刷新控件
         self.userTableView.mj_footer.hidden = (category.users.count == 0);
+        
+        //每次选择左边类别都回调用此方法，都要在此判断右边tableview foot的显示，因为右边的tableview是共用的,每次都应该根据左边的数据来显示，否则可能显示跟之前一次一样
+        if (category.users.count == category.total) {
+            [self.userTableView.mj_footer endRefreshingWithNoMoreData];
+        } else {
+            [self.userTableView.mj_footer endRefreshing];
+        }
+        
+        
         return category.users.count;
     }
     
@@ -201,11 +215,12 @@ static NSString * const userCell = @"userCell";
     
     if (tableView == self.categoryTableView) {
         PDCategoryModel *tmpeCategory = self.categories[indexPath.row];
-        if (tmpeCategory.users.count) {//如果缓存有数据，则用缓存数据，否则网络请求新的数据.
+        if (tmpeCategory.users.count) {//如果缓存有数据，则用缓存数据，否则用网络请求新的数据.
             [self.userTableView reloadData];
         } else {
             //选中类别后立即刷新user数据, 以防显示老数据
             [self.userTableView reloadData];
+            //请求新数据时开始下拉刷新(会自动调用loadNewData)
             [self.userTableView.mj_header beginRefreshing];
 //            [self loadNewData];
         }
